@@ -16,12 +16,11 @@ edge = cv2.Canny(th, 100, 200)
 #save image
 cv2.imwrite('edgescc2.jpg', edge)
 
-
-
+#find edges
 edges = cv2.Canny(th, 50, 150, apertureSize = 3)
-
+#find lines
 lines = cv2.HoughLines(edges, 1, np.pi/180, 200)
-
+#some kind of black magic
 for line in lines:
     rho, theta = line[0]
     a = np.cos(theta)
@@ -33,7 +32,7 @@ for line in lines:
     x2 = int(x0 - 1000*(-b))
     y2 = int(y0 - 1000*(a))
     cv2.line(th, (x1, y1), (x2, y2), (0, 0, 255), 2)
-
+#save image
 cv2.imwrite('houghlines3.jpg', th)
 
 

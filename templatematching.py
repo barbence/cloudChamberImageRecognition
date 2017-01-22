@@ -1,8 +1,11 @@
 import cv2
 import numpy as np
 
+# read image
 img_rgb = cv2.imread('/home/bence/binarycc2.jpg')
+# convert to gray
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+# read template
 template = cv2.imread('/home/bence/template.jpg', 0)
 w, h = template.shape[::-1]
 

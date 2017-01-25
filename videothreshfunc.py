@@ -7,9 +7,11 @@ import cv2
 
 
 def videothresholding(videofile, blur, threshold):
+
     # open video file
     cap = cv2.VideoCapture(videofile)
-    # main function
+
+    # get every frame
     while True:
 
         # capture frames

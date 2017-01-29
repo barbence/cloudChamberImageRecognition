@@ -1,9 +1,9 @@
 import cv2
 
 # default variables
-# videofile = '/home/bence/Downloads/kodkamrademo.mp4'
-# blur = 3
-# threshold = 200
+videofile = '/home/bence/kodkamrademo.mp4'
+blur = 1
+threshold = 100
 
 
 def videothresholding(videofile, blur, threshold):
@@ -26,11 +26,11 @@ def videothresholding(videofile, blur, threshold):
         # show feed
         cv2.imshow('frame', thresh1)
 
-        #exit feed
+        # exit feed
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
     cap.release()
     cv2.destroyAllWindows()
 
-videothresholding('/home/bence/Downloads/kodkamrademo.mp4', 3, 200)
+videothresholding(videofile, blur, threshold)

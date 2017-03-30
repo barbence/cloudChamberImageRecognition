@@ -2,10 +2,10 @@ import numpy as np
 import cv2
 
 # open haar cascade
-alpha_cascade = cv2.CascadeClassifier('~/alpha_classifier/alpha_cascade.xml')
+alpha_cascade = cv2.CascadeClassifier('alpha_classifier/alpha_cascade.xml')
 
 # open video feed
-cap = cv2.VideoCapture('kodkamrademo.mp4')
+cap = cv2.VideoCapture('cloudchamberdemo.mp4')
 
 # get frames while true
 while(cap.isOpened()):

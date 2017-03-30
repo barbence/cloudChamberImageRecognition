@@ -1,9 +1,9 @@
 import numpy as np
 import cv2
 
-alpha_cascade = cv2.CascadeClassifier('own_cascade.xml')
+alpha_cascade = cv2.CascadeClassifier('alpha_classifier/alpha_cascade.xml')
 
-img = cv2.imread('/home/bence/smallcc2.jpg')
+img = cv2.imread('/smallcc2.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 alphas = alpha_cascade.detectMultiScale(gray, 1.7, 5)
 for (x,y,w,h) in alphas:
